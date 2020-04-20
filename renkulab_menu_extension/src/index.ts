@@ -4,13 +4,13 @@ import {
 } from '@jupyterlab/application';
 
 /**
- * Initialization data for the renkulab-env-plugins extension.
+ * Initialization data for the renkulab-menu-extension extension.
  */
 const extension: JupyterFrontEndPlugin<void> = {
-  id: 'renkulab-env-plugins',
+  id: 'renkulab-menu-extension',
   autoStart: true,
   activate: (app: JupyterFrontEnd) => {
-    console.log('JupyterLab extension renkulab-env-plugins is activated!');
+    console.log('JupyterLab extension renkulab-menu-extension is activated!');
   }
 };
 
