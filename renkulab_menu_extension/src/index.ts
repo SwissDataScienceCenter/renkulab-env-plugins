@@ -25,14 +25,14 @@ const extension: JupyterFrontEndPlugin<void> = {
     const { commands } = app;
 
     // Add a command to open renkulab.io
-    const command = 'renku-tools:renkulab-menu-extension';
-    commands.addCommand(command, {
+    const back_to_renkulab = 'renku-tools:back-to-renkulab';
+    commands.addCommand(back_to_renkulab, {
       label: 'Open renkulab.io',
-      caption: 'Execute renku-tools:renkulab-menu-extension Command',
+      caption: 'Execute renku-tools:back-to-renkulab Command',
       execute: (args: any) => {
 
         console.log(
-          `renku-tools:renkulab-menu-extension has been called ${args['origin']}.`
+          `renku-tools:back-to-renkulab has been called ${args['origin']}.`
         );
         window.open("https://renkulab.io")
       }
@@ -41,7 +41,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     // Add the command to the command palette
     const category = 'Renku Tools';
     palette.addItem({
-      command,
+      command:back_to_renkulab,
       category,
       args: { origin: 'from the palette' }
     });
@@ -53,7 +53,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     mainMenu.addMenu(renkuMenu, { rank: 80 });
 
     // Add the command to the menu
-    renkuMenu.addItem({ command, args: { origin: 'from the menu' } });
+    renkuMenu.addItem({ command:back_to_renkulab, args: { origin: 'from the menu' } });
 
   }
 };
