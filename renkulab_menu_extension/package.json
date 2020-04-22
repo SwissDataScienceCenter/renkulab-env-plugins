@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@jupyterlab/application": "^2.0.0",
+    "@jupyterlab/coreutils": "^4.1.0",
     "@jupyterlab/mainmenu": "^2.1.0",
     "@lumino/widgets": "^1.11.1"
   },
